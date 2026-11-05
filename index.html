@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050c0b">
+<meta name="theme-color" content="#151810">
 <meta name="description" content="Metal Lazarus — underground metal intelligence. Interactive v1 prototype.">
 <title>METAL LAZARUS JR. // The Relic Archive</title>
 <style>
@@ -77,18 +77,43 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 @media(max-width:760px){.side{background:#191d16f8;border-top:1px solid #7d7656}.nav{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10px}.nav.active{box-shadow:inset 0 2px #b4c780}.main{padding-bottom:110px}.hero{min-height:280px;padding:28px 20px}.hero h1{font-size:35px}.hero p{font-size:12px}.triangle{opacity:.14}.section-head h2{font-size:22px}.relic-note{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.release,.band{transform:none!important}}
 
+
+/* MATTE RELIC FIX: suppress all surviving neon-era surface effects. */
+:root{--mint:#a5af83;--acid:#bdb186;--cyan:#a8ad91;--line:#595544;--panel:#1c2119;--panel2:#24271e;--white:#e0d5bc;--muted:#aba58f}
+body{background:#151810!important;color:#e0d5bc}
+body:before{opacity:.035!important;mix-blend-mode:normal!important}
+.emblem,.triangle{filter:none!important}
+.emblem{opacity:.8}
+.emblem path{stroke:#9b9d71!important}
+.hero,.rightpanel,.stat,.band,.release,.sidebottom,.invitebox,.bandart,.cover,.chip,.search,.select,.primary,.secondary{filter:none!important;text-shadow:none!important}
+.hero{background:linear-gradient(100deg,#10150de8,#20271fe8),repeating-linear-gradient(90deg,#4e4b3724 0 1px,transparent 2px 22px)!important;border-color:#756b50!important}
+.hero:before{background:linear-gradient(0deg,#10140ca8,transparent 60%)!important}
+.hero:after{border-color:#716d5055!important}
+.hero h1 span{color:#c0c49e!important;text-shadow:none!important}
+.triangle{opacity:.1!important}
+.triangle path,.triangle .inner{stroke:#9d9b75!important}
+.nav.active,.nav:hover{box-shadow:none!important;background:#32372a!important;color:#e7d7b9!important;border-color:#6a664e!important}
+.pulse{box-shadow:none!important;background:#a8ad85!important}
+.primary,.secondary{box-shadow:none!important;background:#383b2d!important;border:1px solid #82795a!important;color:#e6d6b5!important}
+.primary:hover,.secondary:hover{filter:none!important;background:#494f3a!important}
+.stat:before{border-color:#81765b!important}
+.stat,.band,.release,.rightpanel,.invitebox{background:#1c2019!important;box-shadow:inset 0 0 0 2px #12150f!important;border-color:#5b5846!important}
+.bandart,.cover,.cover.c2,.cover.c3,.cover.c4,.cover.c5{background:linear-gradient(145deg,#424436,#22271e)!important;color:#c6bc9b!important}
+.toast{box-shadow:0 5px 14px #0008!important;background:#272c20!important;color:#eadbb9!important;border-color:#8b805c!important}
+.tag.new,.heart.saved,.viewall,.section-eyebrow{color:#c4bd91!important}
+@media(max-width:760px){.side{box-shadow:none!important;background:#20241c!important}.hero{background:#1d241c!important}}
 </style>
 </head>
 <body>
 <div class="shell">
 <aside class="side" aria-label="Primary navigation">
- <div class="brand"><div class="emblem" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 7 L94 87 L6 87 Z" fill="none" stroke="#9aff66" stroke-width="5"/><path d="M50 25 L78 77 L22 77 Z" fill="none" stroke="#5fece8" stroke-width="1.5"/><path d="M50 41 V66 M37 54 H63" stroke="#9aff66" stroke-width="4"/></svg></div><div><div class="brandname">METAL<span>LAZARUS</span></div><small>THE RELIC ARCHIVE</small></div></div>
+ <div class="brand"><div class="emblem" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 7 L94 87 L6 87 Z" fill="none" stroke="#9aff66" stroke-width="5"/><path d="M50 25 L78 77 L22 77 Z" fill="none" stroke="#5fece8" stroke-width="1.5"/><path d="M50 41 V66 M37 54 H63" stroke="#9aff66" stroke-width="4"/></svg></div><div><div class="brandname">METAL<span>LAZARUS JR.</span></div><small>THE RELIC ARCHIVE</small></div></div>
  <div class="navcap">The archive</div>
  <nav id="navigation"><button class="nav active" data-view="dashboard"><span class="glyph">⌂</span>Overview</button><button class="nav" data-view="releases"><span class="glyph">▦</span>Release ledger</button><button class="nav" data-view="discover"><span class="glyph">⌕</span>Discover</button><button class="nav" data-view="favorites"><span class="glyph">♡</span>Collection</button><button class="nav" data-view="access"><span class="glyph">⛨</span>Access</button></nav>
  <div class="sidebottom"><strong><span class="pulse"></span> SYSTEM // ONLINE</strong><p>Prototype environment. Sample records only. Member accounts are not yet active.</p><span class="tiny">ML // BUILD 0.1.0</span></div>
 </aside>
 <main class="main">
-<header class="top"><span class="crumb"><span class="mobilehead">△ METAL LAZARUS</span><span class="desktopcrumb">ARCHIVE / <b id="breadcrumb">OVERVIEW</b></span></span><div class="actions"><span class="status"><span class="pulse"></span>DEMO MODE</span><span class="chip">PROTOTYPE v0.1</span><span class="avatar" title="Local demo profile">ML</span></div></header>
+<header class="top"><span class="crumb"><span class="mobilehead">△ METAL LAZARUS JR.</span><span class="desktopcrumb">ARCHIVE / <b id="breadcrumb">OVERVIEW</b></span></span><div class="actions"><span class="status"><span class="pulse"></span>DEMO MODE</span><span class="chip">PROTOTYPE v0.1</span><span class="avatar" title="Local demo profile">ML</span></div></header>
 <section id="dashboard">
  <div class="hero"><div class="hero-copy"><div class="eyebrow">THE ARCHIVE IS OPEN // EST. UNKNOWN</div><h1>NOTHING IS<br><span>EVER REALLY LOST.</span></h1><p>An underground metal archive. Unearth new releases, trace unfamiliar sounds, and keep the discoveries that matter.</p><div class="relic-note" aria-label="Handwritten inscription">Everything is as it should be.</div><div class="herobuttons"><button class="primary" data-go="releases">Open release ledger ↗</button><button class="secondary" data-go="discover">Explore the archive →</button></div></div><svg class="triangle" viewBox="0 0 240 240" aria-hidden="true"><path d="M120 18L224 206H16Z"/><path class="inner" d="M120 47L198 192H42Z"/><path d="M120 85V150M88 119H152"/><text x="120" y="183" text-anchor="middle">M L // 0 1</text></svg></div>
  <div class="notice">◈ DEMONSTRATION DATA — All bands and releases displayed in this prototype are fictional placeholders, not verified release announcements.</div>
